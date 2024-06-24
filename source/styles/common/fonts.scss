@@ -1,1 +1,10 @@
 /* здесь подключите шрифты */
+$primary-font: "Montserrat-Regular", "Arial", sans-serif;
+$primary-font-medium: "Montserrat-Medium", "Arial", sans-serif;
+$primary-font-semibold: "Montserrat-SemiBold", "Arial", sans-serif;
+$primary-font-bold: "Montserrat-Bold", "Arial", sans-serif;
+
+@include font-face("Montserrat-Regular", 400, normal, url("../../fonts/Montserrat-Regular.woff2") format("woff2"));
+@include font-face("Montserrat-Medium", 500, normal, url("../../fonts/Montserrat-Medium.woff2") format("woff2"));
+@include font-face("Montserrat-SemiBold", 600, normal, url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"));
+@include font-face("Montserrat-Bold", 700, normal, url("../../fonts/Montserrat-Bold.woff2") format("woff2"));

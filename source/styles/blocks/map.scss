@@ -1,0 +1,51 @@
+.map {
+  position: relative;
+  background:
+    image-set(url("../../images/map-mobile@1x.png") 1x,
+    url("../../images/map-mobile@2x.png") 2x);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    background:
+      image-set(url("../../images/map-tablet@1x.png") 1x,
+      url("../../images/map-tablet@2x.png") 2x);
+    height: 480px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    background:
+      image-set(url("../../images/map-desktop@1x.png") 1x,
+      url("../../images/map-desktop@2x.png") 2x);
+    height: 540px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.map::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 126px;
+  content: "";
+  width: 38px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#map-pin");
+  background-size: 38px 50px;
+
+  @media (min-width: $tablet-width) {
+    right: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 686px;
+  }
+}

@@ -1,0 +1,132 @@
+.info__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 317px 318px 317px;
+  }
+}
+
+.info__item {
+  padding: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.info__item:last-child .info__title {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.info__item:last-child {
+  padding-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+  }
+}
+
+.info__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: $primary-font-bold;
+  letter-spacing: 0.28px;
+  color: $base-primary;
+}
+
+.info__sublist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.info__subitem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.info__subitem:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.info__link {
+  font-size: 12px;
+  font-family: $primary-font-medium;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $base-black;
+}
+
+.info-contacts {
+  position: relative;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-size: 13px 16px;
+  }
+}
+
+.info__address {
+  font-style: normal;
+  margin-bottom: 15px;
+
+  &::before {
+    background-image: url("../../icons/stack.svg#address");
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.info__phone {
+  text-decoration: none;
+  color: $base-black;
+
+  &::before {
+    background-image: url("../../icons/stack.svg#phone");
+  }
+}
+
+.info__link:hover,
+.info__link:focus {
+  color: $primary-lighter-color;
+}
+
+.info__phone:hover,
+.info__phone:focus {
+  color: $primary-lighter-color;
+}
+
+.info__link:active,
+.info__phone:active {
+  color: $primary-darker-color;
+}

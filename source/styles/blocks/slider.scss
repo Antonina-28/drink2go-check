@@ -1,0 +1,219 @@
+.slider__button {
+  position: absolute;
+  width: 20px;
+  height: 656px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.slider__button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  mask-image: url("../../icons/stack.svg#arrow");
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    left: 30px;
+  }
+}
+
+.slider__button:hover,
+.slider__button:focus {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider__button:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.slider__button--next {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.slider__list {
+  position: relative;
+  width: 320px;
+  height: 656px;
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style-type: none;
+  text-align: center;
+  overflow: hidden;
+  transition: all 1s;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 828px;
+    padding: 0 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 714px;
+  }
+}
+
+.slider__item {
+  padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 625px;
+  }
+}
+
+.slider__item:nth-child(2) {
+  background-color: $background-lavender;
+}
+
+.slider__item:nth-child(3) {
+  background-color: $background-espresso;
+}
+
+.slider__image {
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 22px;
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-top: 20px;
+    margin-bottom: 84px;
+  }
+}
+
+.slider__container {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-top: 170px;
+  }
+}
+
+.slider__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $primary-font-bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.72px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+    letter-spacing: 1.12px;
+  }
+}
+
+.slider__description {
+  margin: 0;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 39px;
+  }
+}
+
+.slider__wrapper {
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.slider__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  margin-right: 3px;
+}
+
+.slider__new-price {
+  font-family: $primary-font-semibold;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-right: 16px;
+}
+
+.slider__order {
+  padding: 10px 21px 6px 20px;
+}
+
+.slider__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    cursor: pointer;
+  }
+}
+
+.slider__pagination-button {
+  @media (min-width: $desktop-width) {
+    width: 62px;
+    height: 4px;
+    background-color: $base-white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.slider__pagination-button--current {
+  @media (min-width: $desktop-width) {
+    background-color: $base-primary;
+  }
+}
+
+.slider__pagination-button:hover,
+.slider__pagination-button:focus {
+  background-color: $base-primary;
+  opacity: 0.25;
+}

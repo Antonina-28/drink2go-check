@@ -1,0 +1,136 @@
+.pagination {
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+  }
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
+}
+
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  background-color: $base-white;
+  padding: 0;
+}
+
+.pagination__item:first-child {
+  @media (min-width: $tablet-width) {
+    width: 91px;
+    position: relative;
+  }
+}
+
+.pagination__item:last-child {
+  @media (min-width: $tablet-width) {
+    width: 104px;
+    position: relative;
+  }
+}
+
+.pagination__item:first-child .pagination__button,
+.pagination__item:last-child .pagination__button {
+  background-image: url("../../icons/stack.svg#arrow-select");
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    transform: none;
+  }
+}
+
+.pagination__item:last-child .pagination__button {
+  transform: rotate(270deg);
+
+  @media (min-width: $tablet-width) {
+    transform: none;
+  }
+}
+
+.pagination__button {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $base-primary;
+  border: none;
+  background-color: $base-white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination__button--back {
+  @media (min-width: $tablet-width) {
+    width: 91px;
+  }
+}
+
+.pagination__button--forward {
+  @media (min-width: $tablet-width) {
+    width: 104px;
+  }
+}
+
+.pagination__button--back::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "Назад";
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.pagination__button--forward::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "Вперёд";
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.pagination__current {
+  background-color: $background-lightest-grey;
+  color: $base-black;
+  font-family: $primary-font-semibold;
+  font-weight: 600;
+}
+
+.pagination__button:hover,
+.pagination__button:focus {
+  background-color: $primary-lighter-color;
+  color: $base-white;
+}
+
+.pagination__button:active {
+  background-color: $primary-darker-color;
+  color: $base-white;
+}
+
+.pagination__button:disabled {
+  background-color: $light-grey-color;
+  color: $base-white;
+}

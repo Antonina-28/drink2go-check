@@ -1,1 +1,28 @@
 /* здесь используйте глобальные переменные */
+$primary-font: "Montserrat-Regular", "Arial", sans-serif;
+$primary-font-medium: "Montserrat-Medium", "Arial", sans-serif;
+$primary-font-semibold: "Montserrat-SemiBold", "Arial", sans-serif;
+$primary-font-bold: "Montserrat-Bold", "Arial", sans-serif;
+
+//Base Colors
+$base-white: #ffffff;
+$base-grey: #bdbdbd;
+$base-black: #333333;
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
+
+//States Colors
+$primary-lighter-color: #9070ec;
+$primary-darker-color: #593cac;
+$light-grey-color: #e2e2e2;
+
+//Background Colors
+$background-lightest-grey: #f8f8f8;
+$background-flat-white: #f3ebe1;
+$background-lavender: #eae6fc;
+$background-espresso: #e5e6e8;
+
+//Display Resolution
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

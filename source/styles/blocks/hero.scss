@@ -1,0 +1,27 @@
+.hero {
+  position: relative;
+  background-color: $background-flat-white;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, #f3ebe1 77%, #ffffff 33%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $background-flat-white;
+  }
+}
+
+.hero__image {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}

@@ -1,0 +1,80 @@
+.select {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 165px;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
+  }
+}
+
+.select__subtitle {
+  padding-left: 3px;
+  margin: 0;
+  margin-right: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 1px;
+  }
+}
+
+.select__control {
+  appearance: none;
+  padding: 4px;
+  padding-left: 13px;
+  border: none;
+  border-radius: 4px;
+  font-family: $primary-font-semibold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: $base-primary;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.select__arrow {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 7px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../../icons/stack.svg#arrow-select");
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    right: 11px;
+  }
+}
+
+.select__control:hover,
+.select__control:focus {
+  background-color: $base-secondary;
+}
+
+.select__arrow:active {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(180deg);
+}

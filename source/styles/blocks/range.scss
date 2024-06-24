@@ -1,0 +1,122 @@
+.range__scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $light-grey-color;
+  margin-bottom: 36px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    margin-bottom: 34px;
+  }
+}
+
+.range__bar {
+  margin-left: 24px;
+  width: 212px;
+  height: 4px;
+  background-color: $primary-lighter-color;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-46%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $base-primary;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+.range__toggle--max {
+  right: 20px;
+  left: inherit;
+}
+
+.range__inputs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.range__input {
+  appearance: textfield;
+  border-radius: 4px;
+  border: 2px solid $primary-lighter-color;
+  padding: 8px 10px 4px;
+  font-family: $primary-font-medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  line-height: 24px;
+  width: 118px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.range__input[type="number"]::-webkit-inner-spin-button,
+.range__input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+.range__icon {
+  width: 8px;
+  height: 2px;
+  background-image: url("../../icons/stack.svg#minus");
+  background-size: 8px 2px;
+  background-repeat: no-repeat;
+}
+
+.range__input:focus {
+  outline: none;
+  border: 2px solid $primary-darker-color;
+}
+
+.range__input:disabled {
+  cursor: default;
+  border: 2px solid $light-grey-color;
+  color: $base-grey;
+  background-color: $background-lightest-grey;
+}
+
+.range__toggle:hover,
+.range__toggle:focus {
+  background-image: url("../../icons/stack.svg#radio-hover");
+}
+
+.range__toggle:active {
+  background-image: url("../../icons/stack.svg#radio-button-active");
+}
+
+.range__toggle:disabled .range__bar {
+  background-color: $base-grey;
+}
